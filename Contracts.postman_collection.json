@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "1d06ad1c-664c-416f-a4af-6b3bbea944eb",
+		"name": "Contracts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "429574",
+		"_collection_link": "https://speeding-sunset-173567.postman.co/workspace/Assignments~e41545cc-0e06-4957-867a-d3f87f8635d4/collection/429574-1d06ad1c-664c-416f-a4af-6b3bbea944eb?action=share&source=collection_link&creator=429574"
+	},
+	"item": [
+		{
+			"name": "Get Contract By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "7"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/contracts/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contracts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "4"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/contracts",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unpaid Jobs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "7"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/jobs/unpaid",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Best-profession",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/admin/best-profession?start=2019-07-01&end=2025-07-01",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"best-profession"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2019-07-01"
+						},
+						{
+							"key": "end",
+							"value": "2025-07-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Best-Clients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/admin/best-clients?start=2019-07-01&end=2025-07-01&limit=3",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"best-clients"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2019-07-01"
+						},
+						{
+							"key": "end",
+							"value": "2025-07-01"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay fo Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "2"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/jobs/4/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"jobs",
+						"4",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "2"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"depositAmount\": 99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/balances/deposit/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"balances",
+						"deposit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
