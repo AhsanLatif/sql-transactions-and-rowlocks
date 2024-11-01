@@ -1,4 +1,4 @@
-# SQL Transactions and Row Locks Examples
+# SQL Transactions Isolation Levels and Row Locks Examples
 
 💫 Welcome! 🎉
 
